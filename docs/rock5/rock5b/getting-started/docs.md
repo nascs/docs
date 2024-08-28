@@ -1,8 +1,3 @@
----
-sidebar_position: 9
-description: "向 Radxa Docs 贡献技术文档。"
----
-
 # docs 贡献指南 
 
 ## 获取源码
@@ -94,6 +89,8 @@ git clone https://github.com/Test/docs.git
 	- FAQ
 
 ## 写作原则
+
+- 一份中文文档，一份英文文档。
 
 - 注意专业术语的规范
 
