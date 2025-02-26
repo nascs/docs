@@ -70,21 +70,7 @@ Insert the NVME SSD into the board and verify that the NVME is recognized by the
 
 As shown above the system already recognizes the NVME SSD as nvme0n1 (in Linux NVMe devices are usually recognized as nvmeXnY)
 
-Download the following system image to your PC,
-
-<PreView
-  params={{
-    model: props.model,
-    release_num: props.release_num,
-    desktop: props.desktop,
-  }}
->
-  {`
-https://github.com/radxa-build/#model#/releases/download/#release_num#/#model#_debian_bullseye_#desktop#_#release_num#.img.xz
-`}
-</PreView>
-
-Copy the system image to the current system,
+Download system image from <a href={props.download_path}>Resource Download</a> and copy the system image to the current system,
 
 <PreView
   params={{
@@ -113,7 +99,7 @@ Then dd the system image into NVME on the **board**.
   On Board：
   sudo xzcat /path/to/img | dd of=/path/to/nvme bs=1M status=progress
   eg:
-  sudo xzcat /home/radxa/#model#_debian_bullseye_#desktop#_#release_num#.img.xz | sudo dd of=/dev/nvme0n1 bs=1M status=progress
+  sudo xzcat /home/radxa/#model#_xx.img.xz | sudo dd of=/dev/nvme0n1 bs=1M status=progress
   `}
 </PreView>
 
